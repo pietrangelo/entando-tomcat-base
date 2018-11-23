@@ -11,7 +11,7 @@ LABEL description="Base image supporting entando deployment on tomcat container.
 # ENV CLASSPATH=/usr/local/tomcat/bin/bootstrap.jar:/usr/local/tomcat/bin/tomcat-juli.jar
 ########################################################################################
 
-RUN apt update && apt install -y imagemagick && apt autoclean -y && apt autoremove -y
+RUN apt update && apt install -y imagemagick nano && apt autoclean -y && apt autoremove -y
 
 ENV JPAGENT_PATH="-agentpath:/opt/jprofiler10/bin/linux-x64/libjprofilerti.so=port=8849"
 
