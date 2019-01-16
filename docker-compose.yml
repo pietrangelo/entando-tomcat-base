@@ -1,0 +1,20 @@
+---
+version: "3"
+services:
+  tomcat:
+    image:  pmasala/tomcat-base:8.5.37
+    networks:
+      - front-end
+      - back-end
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+  db:
+    image:  postgres:9.6
+    networks:
+      - back-end
+networks:
+  front-end:
+  back-end:
+...
